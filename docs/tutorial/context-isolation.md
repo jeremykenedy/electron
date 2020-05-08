@@ -15,7 +15,7 @@ From Electron 12 it will enabled by default, for lower versions it is an option 
 ```javascript
 const mainWindow = new BrowserWindow({
   webPreferences: {
-    contextIsolation: true,
+    contextIsolation: true
   }
 })
 ```
@@ -37,7 +37,7 @@ window.myAPI = {
 **After: With context isolation enabled**
 
 ```javascript
-const { contextBridge } = require('electron');
+const { contextBridge } = require('electron')
 
 contextBridge.exposeInMainWorld('myAPI', {
   doAThing: () => {}
